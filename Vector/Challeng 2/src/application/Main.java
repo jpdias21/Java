@@ -111,49 +111,108 @@ public class Main {
 //
 //        sc.close();
 
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println("Quantos pessoas seram digitados : ");
+//        int n = sc.nextInt();
+//
+//        HeightPerson [] personHeight = new HeightPerson[n];
+//
+//        for(int i = 0; i < n; i++){
+//            sc.nextLine();
+//            System.out.println("Digite os dados da" + (i+1) + "pessoa :");
+//            String name = sc.next();
+//            int age = sc.nextInt();
+//            double height = sc.nextDouble();
+//
+//            personHeight[i] = new HeightPerson(name, age, height);
+//        }
+//        double sumHeigth = 0.0 ;
+//        for(int i = 0 ; i < n; i++){
+//           sumHeigth += personHeight[i].getHeight();
+//        }
+//        sumHeigth = sumHeigth / personHeight.length;
+//
+//        ArrayList<Integer> personMor = new ArrayList<>();
+//        ArrayList<String> stringPeaplo = new ArrayList<>();
+//        for(int i = 0 ; i < personHeight.length ; i++){
+//            if(personHeight[i].getAge() < 16){
+//                personMor.add(personHeight[i].getAge());
+//
+//            }
+//            if(personHeight[i].getAge() > 16){
+//                stringPeaplo.add(personHeight[i].getName());
+//            }
+//        }
+//        double calculeMor16 = (double) personMor.size() / personHeight.length * 100;
+//
+//
+//        System.out.println("A media das pessoas: " + sumHeigth);
+//        System.out.println("Pessoa com menos de 16: " + calculeMor16);
+//        System.out.println("Pessoas : " + stringPeaplo);
+//
+//
+//        sc.close();
+
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println("Quantos numeros voce ira digitar: ");
+//        int n = sc.nextInt();
+//
+//        AvenNumbers [] avenNumbers = new AvenNumbers[n];
+//        int poss = 0;
+//        for(int i = 0 ; i < n; i++){
+//            sc.nextLine();
+//            System.out.println("Digite um numero");
+//            int number = sc.nextInt();
+//            if(number % 2 == 0){
+//                avenNumbers[poss] = new AvenNumbers(number);
+//                poss++;
+//            }
+//        }
+//        System.out.println("numeros pares: ");
+//       for(int i = 0 ; i < poss; i++){
+//           System.out.println(avenNumbers[i].getNumber());
+//       }
+//        System.out.println("Quantidade de pares : " + poss);
+//        sc.close();
+
+
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Quantos numeros voce ira digitar : ");
+//        int n = sc.nextInt();
+//
+//        HighestPosition[] highestPosition = new HighestPosition[n];
+//
+//        for(int i = 0; i < n; i++ ){
+//            System.out.println("Digite um numero : ");
+//            double number = sc.nextDouble();
+//
+//            highestPosition[i] = new HighestPosition(number);
+//        }
+//        HighestPosition maior = HighestPosition.finMax(highestPosition);
+//        System.out.println("Maior número: " + maior.getNumber());
+//
+//
+//        sc.close();
+
+
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Quantos pessoas seram digitados : ");
+        System.out.println("Quantos valores vai ter cada vetor :");
         int n = sc.nextInt();
+        SumVectors sumVectors = new SumVectors(n);
 
-        HeightPerson [] personHeight = new HeightPerson[n];
+        for(int i = 0; i < n ; i++ ){
+            System.out.println("Digite o valor do vetor A, posicao " + n  +" :");
+            int vectorOne = sc.nextInt();
+            sumVectors = new SumVectors(vectorOne);
 
-        for(int i = 0; i < n; i++){
-            sc.nextLine();
-            System.out.println("Digite os dados da" + (i+1) + "pessoa :");
-            String name = sc.next();
-            int age = sc.nextInt();
-            double height = sc.nextDouble();
-
-            personHeight[i] = new HeightPerson(name, age, height);
         }
-        double sumHeigth = 0.0 ;
-        for(int i = 0 ; i < n; i++){
-           sumHeigth += personHeight[i].getHeight();
-        }
-        sumHeigth = sumHeigth / personHeight.length;
-
-        ArrayList<Integer> personMor = new ArrayList<>();
-        ArrayList<String> stringPeaplo = new ArrayList<>();
-        for(int i = 0 ; i < personHeight.length ; i++){
-            if(personHeight[i].getAge() < 16){
-                personMor.add(personHeight[i].getAge());
-
-            }
-            if(personHeight[i].getAge() > 16){
-                stringPeaplo.add(personHeight[i].getName());
-            }
-        }
-        double calculeMor16 = (double) personMor.size() / personHeight.length * 100;
-
-
-        System.out.println("A media das pessoas: " + sumHeigth);
-        System.out.println("Pessoa com menos de 16: " + calculeMor16);
-        System.out.println("Pessoas : " + stringPeaplo);
-
 
         sc.close();
 
 
     }
+
 }
