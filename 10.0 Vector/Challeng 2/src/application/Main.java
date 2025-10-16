@@ -3,7 +3,9 @@ package application;
 import entities.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Vector;
 
 
 public class Main {
@@ -197,21 +199,124 @@ public class Main {
 //        sc.close();
 
 
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println("Quantos valores vai ter cada vetor :");
+//        int n = sc.nextInt();
+//        int[] numberOne = new int[n];
+//        int [] numberTwo = new int [n];
+//
+//        SumVectors sumVectors = new SumVectors(numberOne, numberTwo);
+//
+//        for(int i = 0; i < n ; i++ ){
+//            System.out.println("Digite o valor do vetor A, posicao " + i+1  +" :");
+//            int vectorOne = sc.nextInt();
+//            numberOne[i] = vectorOne ;
+//        }
+//
+//        for(int i = 0; i < n ; i++ ){
+//            System.out.println("Digite o valor do vetor B, posicao " + i+1  +" :");
+//            int vectorTwo = sc.nextInt();
+//            numberTwo[i] = vectorTwo;
+//        }
+//
+//        sumVectors = new SumVectors(numberOne, numberTwo);
+//
+//        System.out.println("resultado: " + Arrays.toString(sumVectors.Somar()));
+//        System.out.println(Arrays.toString(sumVectors.getVectorOne()));
+//        System.out.println(Arrays.toString(sumVectors.getVectorTwo()));
+//        sc.close();
+//
+//
+
+//       Scanner sc = new Scanner(System.in);
+
+//       System.out.println("Quantos elementos vai ter o vetor: ");
+
+//       int n = sc.nextInt();
+//       AbaixoDaMedia[] abaixoDaMedia = new AbaixoDaMedia[n];
+
+//       for (int i = 0 ; i < n ; i++){
+//           sc.nextLine();
+//           System.out.println("Digite um numero:");
+//           double number = sc.nextDouble();
+
+//           abaixoDaMedia[i] = new AbaixoDaMedia(number);
+//       }
+
+//       double calculation = abaixoDaMedia[0].Calculation(abaixoDaMedia);
+
+//       System.out.println("media do vetor " +  calculation);
+
+//       Vector<Double> abaixo = AbaixoDaMedia.MediaVector(calculation, abaixoDaMedia);
+//       System.out.println("Elementos abaixo da media : " + abaixo);
+
+
+//       sc.close();
+
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println("Quantos elementos vai ter o vetor:");
+//        int n = sc.nextInt();
+//        MediaPares[] mediaPares = new MediaPares[n];
+//
+//        for(int i = 0 ; i < n ; i++){
+//            sc.nextLine();
+//            System.out.println("Digite um numero: ");
+//            double number = sc.nextDouble();
+//            mediaPares[i] = new MediaPares(number);
+//
+//        }
+//        double calculo = mediaPares[0].Somar(mediaPares);
+//        System.out.println("Media dos pares : " + calculo);
+//
+//        double NumPar = mediaPares[0].MediaMediaPar(mediaPares);
+//        if(NumPar == 0){
+//            System.out.println("Nunhum par");
+//        }
+//        sc.close();
+
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Quantas pessoa voce vai digitar: ");
+//        int n = sc.nextInt();
+//        Mais_Velho[] maisVelhos = new Mais_Velho[n];
+//
+//        for(int i = 0 ; i < n ; i++){
+//            sc.nextLine();
+//            System.out.println("Dados da pessoa "+ i+1 + ": "  );
+//
+//            System.out.println("Nome:");
+//            String name = sc.next();
+//
+//            System.out.println("Idade: ");
+//            int age = sc.nextInt();
+//
+//            maisVelhos[i] = new Mais_Velho(name, age);
+//        }
+//
+//        Mais_Velho maisVelha = maisVelhos[0].CalMaisVelho(maisVelhos);
+//
+//        System.out.println("O mais velho: " + maisVelha.getName());
+//        sc.close();
+
         Scanner sc = new Scanner(System.in);
-
-        System.out.println("Quantos valores vai ter cada vetor :");
+        System.out.println("Quantos alinos serao digitados : ");
         int n = sc.nextInt();
-        SumVectors sumVectors = new SumVectors(n);
 
-        for(int i = 0; i < n ; i++ ){
-            System.out.println("Digite o valor do vetor A, posicao " + n  +" :");
-            int vectorOne = sc.nextInt();
-            sumVectors = new SumVectors(vectorOne);
+        Aprovados[] aprovados = new Aprovados[n];
 
+        for(int i =0; i < n ; i++){
+            System.out.println("Digite nome, primeira e sugunda nota  do aluno:");
+            String name = sc.next();
+            double notaOne = sc.nextDouble();
+            double notaTwo = sc.nextDouble();
+
+            aprovados[i] = new Aprovados(name, notaOne, notaTwo);
         }
 
-        sc.close();
 
+        double[] alunosAprovado = aprovados[0].AlunosAprovados(aprovados);
+        sc.close();
 
     }
 
