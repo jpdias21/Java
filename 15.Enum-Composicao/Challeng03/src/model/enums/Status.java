@@ -1,9 +1,10 @@
 package model.enums;
 
 public enum Status {
-    PENDENT("Pedido pendente"),
-    PROCESS("Pedido em processo"),
-    CONFIRM("Pedido confirmado");
+    PENDIND_PAYMENT("Payment pending"),
+    PROCESSING("In processing"),
+    SHIPPED("Shipped"),
+    DELIVERED("Delivered");
 
     private String description;
 
