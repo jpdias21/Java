@@ -39,7 +39,7 @@ public class Main {
         int n = sc.nextInt();
         String productName; double productPrice; int quantity;
         for(int i = 0; i < n ; i++){
-            System.out.println("Procduct name:");
+            System.out.println("#" + (i+1) + " Product name:");
             productName = sc.next();
 
             System.out.println("Product price");

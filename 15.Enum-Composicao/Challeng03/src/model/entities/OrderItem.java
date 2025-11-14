@@ -29,4 +29,11 @@ public class OrderItem {
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
+    @Override
+    public String toString() {
+        return product.getName() +
+                ", $" + String.format("%.2f", price) +
+                ", Quantity: " + quantity +
+                ", Subtotal: $" + String.format("%.2f", quantity * price);
+    }
 }
