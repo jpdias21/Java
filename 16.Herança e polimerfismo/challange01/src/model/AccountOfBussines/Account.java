@@ -1,9 +1,19 @@
-package entities.AccountBusiness;
+package model.AccountOfBussines;
 
 public class Account {
     protected Integer number;
     protected String holder;
     protected Double balance;
+
+    protected Integer idAccountBD;
+
+    public Integer getIdAccountBD() {
+        return idAccountBD;
+    }
+
+    public void setIdAccountBD(Integer idAccountBD) {
+        this.idAccountBD = idAccountBD;
+    }
 
     public Account(){
 
