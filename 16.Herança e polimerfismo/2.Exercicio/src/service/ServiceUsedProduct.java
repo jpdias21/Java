@@ -11,7 +11,7 @@ public class ServiceUsedProduct extends ServiceProduct {
 
         if(product instanceof UsedProduct usedProduct){
 
-            return "Name: " + usedProduct.getName() + "(used)" + ", price : " + usedProduct.getPrice() + " (Manufactore date: " + usedProduct.getDate() + ")";
+            return "Name: " + usedProduct.getName() + "(used)" + ", price :  " + usedProduct.getPrice() + " (Manufactore date: " + usedProduct.getDate() + ")";
         }
 
         return  super.priceTag(product);

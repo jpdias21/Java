@@ -103,7 +103,12 @@ public class Main {
         }
 
         for(Product p : listProduct){
-            System.out.println(serviceProduct.priceTag(p));
+            String tipo ;
+            if(p instanceof ImportedProduct) tipo = "i";
+            else if (p instanceof UsedProduct) tipo = "u";
+            else tipo = "c";
+            ServiceProduct serviceProduct1 = FactoryProduct.create(tipo);
+            System.out.println(serviceProduct1.priceTag(p));
         }
 
     }
