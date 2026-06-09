@@ -1,0 +1,31 @@
+package dataBase.model;
+
+import dataBase.model.interfaces.Avaliavel;
+import dataBase.model.interfaces.Baixavel;
+import dataBase.model.interfaces.Legendavel;
+
+public class Filme extends Conteudo implements Baixavel, Avaliavel, Legendavel {
+    public Filme(String titulo, Double duracacao, Integer classificao) {
+        super(titulo, duracacao, classificao);
+    }
+
+    @Override
+    public void reproduzir() {
+
+    }
+
+    @Override
+    public void avaliar() {
+
+    }
+
+    @Override
+    public void baixar() {
+
+    }
+
+    @Override
+    public void ativarLegenda() {
+
+    }
+}
